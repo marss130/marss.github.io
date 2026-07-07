@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marwan Bingert — Cybersécurité offensive & DevSecOps</title>
+  <meta name="description" content="Portfolio de Marwan Bingert (marss) : sécurité offensive, pentest et DevSecOps. Alternant infrastructure IT en réorientation cybersécurité, appétence industriel / OT / SCADA.">
+  <meta name="author" content="Marwan Bingert">
+  <meta name="color-scheme" content="dark">
+
+  <!-- Favicon en ligne (aucun fichier externe requis) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230d1016'/><text x='16' y='23' font-family='monospace' font-weight='700' font-size='20' fill='%23f2a94b' text-anchor='middle'>m</text></svg>">
+
+  <!-- Typographie : superfamille IBM Plex -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#projets">Aller aux projets</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Navigation principale">
+      <a class="brand" href="#top" aria-label="Retour en haut">
+        <span class="brand-mark">marss</span><span class="brand-cursor" aria-hidden="true"></span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Ouvrir le menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#a-propos">À propos</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#experience">Expérience</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <!-- [À REMPLIR] : dépose ton fichier "cv.pdf" à la racine du dépôt -->
+        <li><a class="btn btn-accent nav-cv" href="cv.pdf">CV<span aria-hidden="true"> ↓</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-lede">
+          <p class="eyebrow anim" data-anim="1">// profil — cybersécurité</p>
+          <h1 class="hero-title anim" id="hero-title" data-anim="2">Marwan&nbsp;Bingert</h1>
+          <p class="hero-role anim" data-anim="3">Sécurité offensive <span class="amp">&amp;</span> DevSecOps</p>
+          <p class="hero-sub anim" data-anim="4">
+            Alternant infrastructure IT qui bascule vers le pentest et la sécurisation
+            des chaînes CI/CD. Terrain de jeu : l'industriel et les systèmes critiques.
+          </p>
+          <p class="hero-status anim mono" data-anim="5">
+            <span class="dot" aria-hidden="true"></span>statut : en recherche d'alternance · cybersécurité · Bac+4/5<span class="type-cursor" aria-hidden="true"></span>
+          </p>
+
+          <div class="hero-cta anim" data-anim="6">
+            <a class="btn btn-accent" href="#projets">Voir les projets</a>
+            <!-- [À REMPLIR] : dépose "cv.pdf" à la racine du dépôt -->
+            <a class="btn btn-outline" href="cv.pdf">CV <span class="mono small" aria-hidden="true">(PDF)</span></a>
+            <!-- [À REMPLIR] : remplace "#" par l'URL de ton profil GitHub -->
+            <a class="btn btn-icon" href="#" aria-label="GitHub (à remplir)">
+              <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+            </a>
+            <!-- [À REMPLIR] : remplace "#" par l'URL de ton profil LinkedIn -->
+            <a class="btn btn-icon" href="#" aria-label="LinkedIn (à remplir)">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Carte "fiche profil" — signature du site -->
+        <aside class="profile-card anim" data-anim="4" aria-label="Fiche profil">
+          <div class="pc-head mono">
+            <span>profil.txt</span>
+            <span class="pc-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          </div>
+          <dl class="meta">
+            <dt>Poste actuel</dt>
+            <dd>Alternant infrastructure IT — CORYS</dd>
+            <dt>Recherche</dt>
+            <dd>Alternance cybersécurité (Bac+4/5)</dd>
+            <dt>Focus</dt>
+            <dd>sécurité offensive · DevSecOps · OT / industriel</dd>
+            <dt>Langues</dt>
+            <dd>Français (natif) · Anglais (C1)</dd>
+            <dt>Localisation</dt>
+            <!-- [À REMPLIR] : ex. Grenoble / Auvergne-Rhône-Alpes -->
+            <dd class="fillme">[À REMPLIR — ex. Grenoble]</dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ À PROPOS ============ -->
+    <section class="section" id="a-propos" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="section-head reveal">
+          <p class="eyebrow">// à propos</p>
+          <h2 class="section-title" id="about-title">Un profil infra qui passe à l'offensif</h2>
+        </div>
+        <div class="about-body reveal">
+          <p>
+            J'administre aujourd'hui des environnements Linux en contexte industriel critique chez
+            CORYS : services d'annuaire, authentification centralisée et pipelines de déploiement
+            automatisés. En parallèle, je fais évoluer mon profil vers la <strong>sécurité offensive</strong>
+            et le <strong>DevSecOps</strong> — CTF, tests d'intrusion, detection engineering et automatisation.
+          </p>
+          <p>
+            Ce qui me motive, c'est l'<strong>investigation</strong> et la <strong>R&amp;D</strong> :
+            comprendre comment un système casse pour mieux le durcir, puis documenter proprement la démarche.
+            J'ai une appétence particulière pour les environnements <strong>industriels et OT/SCADA</strong>,
+            là où la sécurité rencontre des systèmes physiques et critiques.
+          </p>
+          <p class="mono note">
+            &gt; objectif : transformer cette bascule en spécialité, au sein d'une équipe qui fait
+            de l'évaluation de vulnérabilités et du pentest sur des infrastructures qui comptent.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COMPÉTENCES ============ -->
+    <section class="section section-alt" id="competences" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">// compétences</p>
+          <h2 class="section-title" id="skills-title">Ce que je sais faire</h2>
+          <p class="section-intro">Regroupé par domaine — les termes techniques restent en anglais.</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-cat reveal">
+            <h3 class="skill-cat-title mono"><span class="hash">#</span> Sécurité offensive / pentest</h3>
+            <ul class="tags">
+              <li>CTF (Root-Me)</li><li>Kali Linux</li><li>Burp Suite</li><li>nmap</li>
+              <li>radare2</li><li>gdb-peda</li><li>forensique (Volatility, Sleuth Kit)</li>
+              <li>stéganographie</li><li>cryptanalyse (XOR)</li><li>SQLi</li><li>brute-force</li>
+            </ul>
+          </div>
+
+          <div class="skill-cat reveal">
+            <h3 class="skill-cat-title mono"><span class="hash">#</span> Détection / blue team</h3>
+            <ul class="tags">
+              <li>Suricata (règles custom)</li><li>ELK (Logstash · Kibana)</li>
+              <li>SIEM</li><li>detection engineering</li>
+            </ul>
+          </div>
+
+          <div class="skill-cat reveal">
+            <h3 class="skill-cat-title mono"><span class="hash">#</span> DevSecOps &amp; automatisation</h3>
+            <ul class="tags">
+              <li>Ansible</li><li>Semaphore (CI/CD · webhooks)</li><li>NetBox</li>
+              <li>HashiCorp Vault</li><li>scripting Python</li>
+            </ul>
+          </div>
+
+          <div class="skill-cat reveal">
+            <h3 class="skill-cat-title mono"><span class="hash">#</span> Infrastructure &amp; conteneurs</h3>
+            <ul class="tags">
+              <li>Proxmox</li><li>TrueNAS</li><li>VMware vSphere</li><li>Docker</li>
+              <li>Foreman</li><li>PXE / preseed</li><li>Debian</li><li>RHEL</li>
+            </ul>
+          </div>
+
+          <div class="skill-cat reveal">
+            <h3 class="skill-cat-title mono"><span class="hash">#</span> Réseau &amp; sécurité réseau</h3>
+            <ul class="tags">
+              <li>FortiGate</li><li>Palo Alto</li><li>VLAN</li><li>OSPF</li><li>VRF</li>
+              <li>WireGuard (VPN)</li><li>Pi-hole</li><li>routage policy-based</li><li>subnetting</li>
+            </ul>
+          </div>
+
+          <div class="skill-cat reveal">
+            <h3 class="skill-cat-title mono"><span class="hash">#</span> Identité</h3>
+            <ul class="tags">
+              <li>Active Directory</li><li>OpenLDAP</li><li>SSSD</li><li>Kerberos</li>
+            </ul>
+          </div>
+
+          <div class="skill-cat reveal">
+            <h3 class="skill-cat-title mono"><span class="hash">#</span> Développement</h3>
+            <ul class="tags">
+              <li>Python (Flask · FastAPI)</li><li>JavaScript / Tailwind</li>
+              <li>SQL / SQLite</li><li>C++ (Unreal Engine 5)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJETS ============ -->
+    <section class="section" id="projets" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">// projets</p>
+          <h2 class="section-title" id="projects-title">Projets sélectionnés</h2>
+          <p class="section-intro">Classés par pertinence pour un poste d'évaluation de vulnérabilités &amp; pentest.</p>
+        </div>
+
+        <div class="projects">
+
+          <!-- PROJ-01 — mis en avant -->
+          <article class="project featured reveal">
+            <div class="project-top">
+              <span class="ref mono">PROJ-01</span>
+              <span class="chips">
+                <span class="chip chip-context">École · équipe</span>
+                <span class="chip chip-star">En avant</span>
+              </span>
+            </div>
+            <h3 class="project-title">CTF industriel / SCADA</h3>
+            <div class="project-field">
+              <span class="field-label mono">Contexte</span>
+              <p>Projet d'équipe (4 personnes) : conception d'une infrastructure de CTF sur le thème
+                d'une <strong>compromission industrielle / SCADA</strong> — scénario fictif d'attaque d'un
+                environnement industriel, jusqu'à la présentation aux participants.</p>
+            </div>
+            <div class="project-field">
+              <span class="field-label mono">Ce que j'ai fait</span>
+              <p>Conçu et déployé des <strong>VMs volontairement vulnérables sur Proxmox</strong> (services faibles,
+                escalade de privilèges, pivot réseau), monté le scoreboard <strong>CTFd</strong>, défini une
+                stratégie de <strong>tests croisés</strong> en équipe, et rédigé le dossier technique
+                (déploiement, implémentation des épreuves, recette).</p>
+            </div>
+            <div class="project-field">
+              <span class="field-label mono">Lien cybersécurité</span>
+              <p>Cœur de l'offre : <strong>conception d'environnements vulnérables</strong> +
+                <strong>tests d'intrusion</strong> dans un <strong>contexte industriel / OT</strong>.</p>
+            </div>
+            <ul class="tags tags-tech">
+              <li>Proxmox</li><li>CTFd</li><li>Linux</li><li>priv-esc</li>
+              <li>pivot réseau</li><li>services vulnérables</li><li>SCADA (scénario)</li>
+            </ul>
+            <!-- [À REMPLIR] : remplace "#" par l'URL du dépôt -->
+            <a class="repo-link mono" href="#">repo <span aria-hidden="true">▸</span> [À REMPLIR]</a>
+          </article>
+
+          <!-- PROJ-02 -->
+          <article class="project reveal">
+            <div class="project-top">
+              <span class="ref mono">PROJ-02</span>
+              <span class="chips"><span class="chip chip-context">Perso · lab</span></span>
+            </div>
+            <h3 class="project-title">Lab de détection d'intrusion (SIEM)</h3>
+            <div class="project-field">
+              <span class="field-label mono">Contexte</span>
+              <p>Lab personnel de <strong>detection engineering</strong> pour observer et qualifier le trafic réseau.</p>
+            </div>
+            <div class="project-field">
+              <span class="field-label mono">Ce que j'ai fait</span>
+              <p>Déployé une <strong>stack ELK dockerisée</strong>, ingéré les logs <strong>Suricata (EVE JSON)</strong>
+                via Logstash, construit des dashboards <strong>Kibana</strong> et écrit des
+                <strong>règles Suricata personnalisées</strong> (ICMP, path traversal, détection de scan Nmap).</p>
+            </div>
+            <div class="project-field">
+              <span class="field-label mono">Lien cybersécurité</span>
+              <p><strong>Detection engineering</strong>, conteneurs et réflexes DevSecOps : la contrepartie
+                défensive d'un travail offensif.</p>
+            </div>
+            <ul class="tags tags-tech">
+              <li>Suricata</li><li>Elasticsearch</li><li>Logstash</li><li>Kibana</li>
+              <li>Docker</li><li>EVE JSON</li>
+            </ul>
+            <!-- [À REMPLIR] : remplace "#" par l'URL du dépôt -->
+            <a class="repo-link mono" href="#">repo <span aria-hidden="true">▸</span> [À REMPLIR]</a>
+          </article>
+
+          <!-- PROJ-03 -->
+          <article class="project reveal">
+            <div class="project-top">
+              <span class="ref mono">PROJ-03</span>
+              <span class="chips"><span class="chip chip-context">Perso · infra</span></span>
+            </div>
+            <h3 class="project-title">Homelab auto-hébergé</h3>
+            <div class="project-field">
+              <span class="field-label mono">Contexte</span>
+              <p>Infrastructure personnelle <strong>always-on</strong> pour expérimenter virtualisation,
+                stockage et services réseau.</p>
+            </div>
+            <div class="project-field">
+              <span class="field-label mono">Ce que j'ai fait</span>
+              <p><strong>Proxmox VE</strong> sur machine haut de gamme (i9-14900K), stockage <strong>TrueNAS</strong>,
+                et un <strong>Raspberry Pi</strong> qui héberge un <strong>VPN WireGuard</strong> et un
+                <strong>Pi-hole</strong> ; réseau multi-interfaces avec <strong>bascule automatique</strong>.</p>
+            </div>
+            <div class="project-field">
+              <span class="field-label mono">Lien cybersécurité</span>
+              <p>Maîtrise de la virtualisation, du <strong>VPN &amp; de la cryptographie</strong>, et de
+                l'hygiène DNS / réseau.</p>
+            </div>
+            <ul class="tags tags-tech">
+              <li>Proxmox</li><li>TrueNAS</li><li>WireGuard</li><li>Pi-hole</li>
+              <li>Debian</li><li>policy-based routing</li>
+            </ul>
+            <!-- [À REMPLIR] : remplace "#" par l'URL du dépôt -->
+            <a class="repo-link mono" href="#">repo <span aria-hidden="true">▸</span> [À REMPLIR]</a>
+          </article>
+
+          <!-- PROJ-04 -->
+          <article class="project reveal">
+            <div class="project-top">
+              <span class="ref mono">PROJ-04</span>
+              <span class="chips"><span class="chip chip-context">Perso / pro · IaC</span></span>
+            </div>
+            <h3 class="project-title">Automatisation réseau (Infrastructure as Code)</h3>
+            <div class="project-field">
+              <span class="field-label mono">Contexte</span>
+              <p>Automatiser la configuration réseau sur un parc <strong>multi-équipements</strong> hétérogène.</p>
+            </div>
+            <div class="project-field">
+              <span class="field-label mono">Ce que j'ai fait</span>
+              <p>Écrit un <strong>playbook Ansible</strong> de création de VLAN (FortiGate / Palo Alto / switches),
+                avec inventaire piloté par <strong>NetBox</strong>, secrets gérés dans <strong>Vault</strong>,
+                et exécution via <strong>CI/CD (Semaphore + webhooks)</strong>.</p>
+            </div>
+            <div class="project-field">
+              <span class="field-label mono">Lien cybersécurité</span>
+              <p><strong>DevSecOps</strong> concret : automatisation, <strong>sécurisation de la CI/CD</strong>
+                et gestion centralisée des secrets.</p>
+            </div>
+            <ul class="tags tags-tech">
+              <li>Ansible</li><li>NetBox</li><li>HashiCorp Vault</li><li>Semaphore</li>
+              <li>FortiGate</li><li>Palo Alto</li>
+            </ul>
+            <!-- [À REMPLIR] : remplace "#" par l'URL du dépôt -->
+            <a class="repo-link mono" href="#">repo <span aria-hidden="true">▸</span> [À REMPLIR]</a>
+          </article>
+
+          <!-- PROJ-05 — secondaire -->
+          <article class="project reveal">
+            <div class="project-top">
+              <span class="ref mono">PROJ-05</span>
+              <span class="chips"><span class="chip chip-context">Perso · dev</span></span>
+            </div>
+            <h3 class="project-title">Bot Telegram + Mini App</h3>
+            <div class="project-field">
+              <span class="field-label mono">Contexte</span>
+              <p>Application de gestion de commandes, du bot Telegram vers une Mini App web.</p>
+            </div>
+            <div class="project-field">
+              <span class="field-label mono">Ce que j'ai fait</span>
+              <p>Backend <strong>Python (FastAPI)</strong>, logique en <strong>machine à états</strong>,
+                <strong>hachage sécurisé des données sensibles</strong> (SHA-256 + pepper) et base
+                <strong>SQLite</strong> ; front en JavaScript / Tailwind.</p>
+            </div>
+            <div class="project-field">
+              <span class="field-label mono">Lien cybersécurité</span>
+              <p>Développement <strong>full stack</strong> avec de vrais <strong>réflexes de sécurité applicative</strong>
+                (hachage, traitement des données sensibles).</p>
+            </div>
+            <ul class="tags tags-tech">
+              <li>Python</li><li>FastAPI</li><li>JavaScript / Tailwind</li><li>SQLite</li>
+            </ul>
+            <!-- [À REMPLIR] : remplace "#" par l'URL du dépôt -->
+            <a class="repo-link mono" href="#">repo <span aria-hidden="true">▸</span> [À REMPLIR]</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPÉRIENCE ============ -->
+    <section class="section section-alt" id="experience" aria-labelledby="xp-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">// expérience</p>
+          <h2 class="section-title" id="xp-title">Expérience professionnelle</h2>
+        </div>
+
+        <article class="xp reveal">
+          <div class="xp-head">
+            <div>
+              <h3 class="xp-role">Alternant — Infrastructure IT</h3>
+              <p class="xp-org">CORYS <span class="xp-org-note">· simulation industrielle</span></p>
+            </div>
+            <!-- [À REMPLIR] : ta période, ex. « depuis 2024 » -->
+            <p class="xp-period mono fillme">[À REMPLIR — période]</p>
+          </div>
+
+          <p class="xp-intro">Administration d'une infrastructure Linux en <strong>environnement industriel
+            critique</strong>. Missions principales :</p>
+
+          <ul class="xp-list">
+            <li>Services d'<strong>annuaire (LDAP)</strong> et <strong>authentification centralisée</strong>
+              d'un parc de serveurs hétérogène.</li>
+            <li>Pipeline de <strong>déploiement automatisé</strong> (PXE / preseed, Foreman) sur parc
+              <strong>Debian / RHEL</strong>.</li>
+            <li><strong>Automatisation</strong> de la configuration réseau et système (Ansible, CI/CD).</li>
+          </ul>
+
+          <div class="xp-field">
+            <span class="field-label mono">Lien cybersécurité</span>
+            <p>Exposition directe à l'<strong>infrastructure critique</strong> et au <strong>contexte industriel</strong> :
+              sécurité des systèmes, gestion d'identité et durcissement d'un parc hétérogène.</p>
+          </div>
+
+          <p class="xp-confid mono">
+            &gt; contenu volontairement générique — aucun détail confidentiel (hostnames, IPs, ports,
+            DN LDAP, clés) n'est publié.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-wrap reveal">
+        <p class="eyebrow">// contact</p>
+        <h2 class="section-title" id="contact-title">Travaillons ensemble</h2>
+        <p class="contact-intro">
+          Ouvert aux opportunités d'alternance en cybersécurité (évaluation de vulnérabilités,
+          pentest, DevSecOps). Le plus simple pour me joindre :
+        </p>
+
+        <ul class="contact-list">
+          <li>
+            <span class="field-label mono">Email</span>
+            <!-- [À REMPLIR] : remplace par ton adresse, ex. href="mailto:prenom.nom@exemple.com" -->
+            <a href="#" class="contact-value mono">[À REMPLIR]@exemple.com</a>
+          </li>
+          <li>
+            <span class="field-label mono">GitHub</span>
+            <!-- [À REMPLIR] : remplace "#" et le texte par ton URL -->
+            <a href="#" class="contact-value mono">github.com/[À REMPLIR]</a>
+          </li>
+          <li>
+            <span class="field-label mono">LinkedIn</span>
+            <!-- [À REMPLIR] : remplace "#" et le texte par ton URL -->
+            <a href="#" class="contact-value mono">linkedin.com/in/[À REMPLIR]</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="mono footer-meta">© <span id="year">2026</span> Marwan Bingert — construit en HTML/CSS/JS · déployé sur GitHub&nbsp;Pages</p>
+      <a class="back-top mono" href="#top">retour en haut <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
